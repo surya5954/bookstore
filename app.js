@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 app.use('/api', router);
 
 app.listen(3000);
-// console.log('Running on port 3000...');
+console.log('Running on port 3000...');
 
 
 module.exports = app;
