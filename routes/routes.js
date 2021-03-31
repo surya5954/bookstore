@@ -11,7 +11,7 @@ router.get('/books', (req, res) => {
     });
 });
 
-router.get('/books/:_id', (req, res) => {
+router.get('/book/:_id', (req, res) => {
     Book.getBookById(req.params._id, (err, book) => {
         if (err) {
             throw err;
@@ -20,7 +20,7 @@ router.get('/books/:_id', (req, res) => {
     });
 });
 
-router.post('/books', (req, res) => {
+router.post('/book', (req, res) => {
     var book = req.body;
     Book.addBook(book, (err, book) => {
         if (err) {
@@ -30,7 +30,7 @@ router.post('/books', (req, res) => {
     });
 });
 
-router.put('/books/:_id', (req, res) => {
+router.put('/book/:_id', (req, res) => {
     var id = req.params._id;
     var book = req.body;
     Book.updateBook(id, book, {}, (err, book) => {
@@ -41,7 +41,7 @@ router.put('/books/:_id', (req, res) => {
     });
 });
 
-router.delete('/books/:_id', (req, res) => {
+router.delete('/book/:_id', (req, res) => {
     var id = req.params._id;
     Book.removeBook(id, (err, book) => {
         if (err) {
